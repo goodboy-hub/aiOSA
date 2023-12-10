@@ -1,0 +1,22 @@
+本项目是基于超短程睡前心电对OSA进行筛查的一个工具模型.本项目基于pytorch进行开发
+【数据来源以及预处理】
+本项目使用的数据分为公开数据和私有数据两部分。关于公开数据,需要者可以自行前往nsrr网站进行下载。
+https://sleepdata.org/datasets/msp
+https://sleepdata.org/datasets/cfs
+https://sleepdata.org/datasets/numom2b
+https://sleepdata.org/datasets/shhs
+https://sleepdata.org/datasets/wsc
+这些数据在申请之后都可以免费下载
+本项目中已经打包好了对于nsrr中PSG睡眠数据的提取和预处理代码,见analysis_extract,详细的预处理细节见代码
+【文件】
+本项目总共四个大文件夹
+analysis_extract                睡前心电数据提取
+CNNmodel                        基于数据训练的CNN模型和训练测试代码
+crnn_model                      基于数据训练的cnn+rnn模型训练和测试代码
+HeartRateVariability_220217     这是一个开源在github上的hrv计算包,将在测试中用到
+
+【使用说明】
+本项目主要的模型结果为CNN模型,在CNNmodel有模型参数,可以直接进行调用使用。如果想要自己重新进行训练,需要使用者自己前往nsrr
+下载数据并使用analysis_extract中的处理代码进行预处理。或者使用者有自己的数据也可以直接使用训练代码进行训练。
+
+如出现任何问题,欢迎留言指出。
