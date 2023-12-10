@@ -1,0 +1,9 @@
+这个文件夹里面放的是该项目在CNN模型训练过程中的最核心代码。其中
+model_40            模型文件,可以直接用torch.load()加载调用,但请注意最好使用gpu调用,cpu可能比较费劲
+model_40.out        模型训练中的loss文件
+netld.py            模型的架构文件
+preprocess.py       数据在进入模型之前的预处理文件
+color_box.py        本人自己喜欢的一套配色,使用者随意
+ResampleTools.py    一些心电数据重采样和简易识别函数
+train_test.py       **这是核心的训练文件,其中包含了简易的测试模块
+Tree_model          根据HRV进行传统机器学习建模的文件

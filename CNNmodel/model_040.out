@@ -1,0 +1,57 @@
+nohup: ignoring input
+启动正常
+wsc loaded down
+shhs1 loaded down
+shhs2 loaded down
+cfs loaded down
+numom2b1 loaded down
+numom2b2 loaded down
+开始质量控制
+质量控制结束
+训练集:7744,测试集2021
+数据正则化开始
+数据正则化完成
+train_use_cut
+epoch 0 down
+epoch0,loss:0.575139045715332
+epoch 10 down
+epoch10,loss:0.31401708722114563
+epoch 20 down
+epoch20,loss:0.14859800040721893
+epoch 30 down
+epoch30,loss:0.10043929517269135
+epoch 40 down
+epoch40,loss:0.07976946234703064
+epoch 50 down
+epoch50,loss:0.06476830691099167
+epoch 60 down
+epoch60,loss:0.06741544604301453
+epoch 70 down
+epoch70,loss:0.056326765567064285
+epoch 80 down
+epoch80,loss:0.06292014569044113
+epoch 90 down
+epoch90,loss:0.05639081075787544
+epoch 100 down
+epoch100,loss:0.05860584229230881
+epoch 110 down
+epoch110,loss:0.05849490314722061
+epoch 120 down
+epoch120,loss:0.055369894951581955
+epoch 130 down
+epoch130,loss:0.05529604107141495
+epoch 140 down
+epoch140,loss:0.0615028440952301
+epoch 150 down
+epoch150,loss:0.057528913021087646
+模型已保存至model_040
+model=Net1D(in_channels=1,base_filters=256,ratio=1,
+          filter_list=[256,512,512,256,128,32],m_blocks_list=[3,3,4,4,3,1],
+          kernel_size=8,stride=2,
+          n_classes=2,use_bn=True,use_do=True,verbose=False,groups_width=16)
+device = torch.device('cuda:9')
+model.to(device)
+lossfun=nn.CrossEntropyLoss()##自动求平均的
+updater=torch.optim.Adam(model.parameters(),lr=1e-3)
+test_use_cut
+auc:0.6672603621072213
